@@ -6,7 +6,7 @@ import notes from "./data/notes";
 const NoteList = () => {
     return (
         notes.map(note => {
-            return <Note key={note.id} note={note}/>
+            return <Note key={note.key} note={note}/>
         })
     );
 }
