@@ -1,9 +1,11 @@
-import './App.css';
+import React from "react";
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import NoteList from './NoteList/NoteList';
+import './App.css';
 
-function App() {
+
+const App = () => {
 	return (
 		<div>
 			<Header />
