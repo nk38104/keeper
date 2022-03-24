@@ -1,11 +1,11 @@
 import React from "react";
 import "./Note.css";
 
-const Note = () => {    
+const Note = ({ note }) => {    
     return (
         <div className="note">
-            <h1>This is a note title</h1>
-            <p>This is a note content</p>
+            <h1>{note.title}</h1>
+            <p>{note.content}</p>
         </div>
     );
 };
