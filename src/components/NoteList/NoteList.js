@@ -2,10 +2,10 @@ import React from "react";
 import Note from "../Note/Note";
 
 
-const NoteList = ({ notes, onDelete }) => {
+const NoteList = ({ notes, deleteNote }) => {
     return (
         notes.map((note, index) => {
-            return <Note key={index} id={index} note={note} onDelete={onDelete} />
+            return <Note key={index} id={index} note={note} deleteNote={deleteNote} />
         })
     );
 }

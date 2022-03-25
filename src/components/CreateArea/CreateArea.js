@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CreateArea.css";
 
 
-const CreateArea = ({ onAdd }) => {
+const CreateArea = ({ addNote }) => {
     const initNoteState = {
         title: "",
         content: ""
@@ -11,22 +11,23 @@ const CreateArea = ({ onAdd }) => {
     const [note, setNote] = useState(initNoteState);
 
     const handleElementChange = (event) => {
-        const elementContent = event.target.value;
-        const elementName = event.target.name;
+        const { name, value } = event.target;
 
-        setNote((prevValue) => {
+        setNote(prevValue => {
             return {
                 ...prevValue,
-                [elementName]: elementContent
+                [name]: value
             }
         });
     }
 
-    const handleNoteAdd = (event) => {
-        onAdd(note);
-
+    const handleSubmitNote = (event) => {
+        if(note.title.length && note.content.length) {
+            addNote(note);
+            setNote(initNoteState);
+        }
+        
         event.preventDefault();
-        setNote(initNoteState);
     }
 
     return (
@@ -34,7 +35,7 @@ const CreateArea = ({ onAdd }) => {
             <form>
                 <input onChange={handleElementChange} name="title" placeholder="Enter note title here..." value={note.title}/>
                 <textarea onChange={handleElementChange} name="content" placeholder="Enter note content here..." rows="3" value={note.content}/>
-                <button onClick={handleNoteAdd}>Add</button>
+                <button onClick={handleSubmitNote}>Add</button>
             </form>
         </div>
     );

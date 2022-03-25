@@ -21,6 +21,7 @@
 }
 
 .note button {
+    background: none;
     position: relative;
     float: right;
     margin-right: 10px;

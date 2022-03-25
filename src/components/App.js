@@ -9,13 +9,13 @@ import './App.css';
 const App = () => {
 	const [notes, setNotes] = useState([]);
 
-	function onNoteAdd(newNote) {
+	function onAddNote(newNote) {
 		setNotes((prevNotes) => {
 			return [...prevNotes, newNote];
 		});
 	}
 
-	function onNoteDelete(noteId) {
+	function onDeleteNote(noteId) {
 		setNotes((prevNotes) => {
 			return prevNotes.filter((_, index) => index !== noteId);
 		});
@@ -24,8 +24,8 @@ const App = () => {
 	return (
 		<div>
 			<Header />
-			<CreateArea onAdd={onNoteAdd} />
-			<NoteList notes={notes} onDelete={onNoteDelete} />
+			<CreateArea addNote={onAddNote} />
+			<NoteList notes={notes} deleteNote={onDeleteNote} />
 			<Footer />
 		</div>
 	);
