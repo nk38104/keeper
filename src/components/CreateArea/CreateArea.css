@@ -19,6 +19,10 @@ form textarea {
     width: 100%;
 }
 
+form input {
+    border-bottom: 1px solid lightgray;
+}
+
 form button {
     background: #f5ba13;
     border: none;
@@ -32,4 +36,8 @@ form button {
     position: absolute;
     right: 18px;
     width: 36px;
+}
+
+form button:hover {
+    transform: scale(1.05);
 }

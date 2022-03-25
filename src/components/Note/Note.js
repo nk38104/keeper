@@ -6,6 +6,7 @@ const Note = ({ note }) => {
         <div className="note">
             <h1>{note.title}</h1>
             <p>{note.content}</p>
+            <button>Delete</button>
         </div>
     );
 };

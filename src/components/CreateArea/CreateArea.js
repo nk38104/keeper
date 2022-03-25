@@ -7,7 +7,7 @@ const CreateArea = () => {
         <div>
             <form>
                 <input name="title" placeholder="Enter note title here..." />
-                <textarea name="content" placeholder="Take a note..." rows="3" />
+                <textarea name="content" placeholder="Enter note content here..." rows="3" />
                 <button>Add</button>
             </form>
         </div>
