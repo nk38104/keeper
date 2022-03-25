@@ -1,7 +1,7 @@
 import React from "react";
 import "./Note.css";
 
-const Note = ({ note }) => {    
+const Note = ({ note, onDelete }) => {    
     return (
         <div className="note">
             <h1>{note.title}</h1>
