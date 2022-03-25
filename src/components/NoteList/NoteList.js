@@ -4,8 +4,8 @@ import Note from "../Note/Note";
 
 const NoteList = ({ notes, onDelete }) => {
     return (
-        notes.map(note => {
-            return <Note key={note.key} note={note} onDelete={onDelete} />
+        notes.map((note, index) => {
+            return <Note key={index} id={index} note={note} onDelete={onDelete} />
         })
     );
 }

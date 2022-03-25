@@ -7,7 +7,6 @@ import './App.css';
 
 
 const App = () => {
-	debugger;
 	const [notes, setNotes] = useState([]);
 
 	function onNoteAdd(newNote) {
@@ -16,11 +15,17 @@ const App = () => {
 		});
 	}
 
+	function onNoteDelete(noteId) {
+		setNotes((prevNotes) => {
+			return prevNotes.filter((_, index) => index !== noteId);
+		});
+	}
+
 	return (
 		<div>
 			<Header />
 			<CreateArea onAdd={onNoteAdd} />
-			<NoteList notes={notes} />
+			<NoteList notes={notes} onDelete={onNoteDelete} />
 			<Footer />
 		</div>
 	);
