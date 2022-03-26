@@ -10,5 +10,7 @@ html {
 
 body {
   background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/grey-washed-wall.png"); */
   padding: 0 16px;
 }

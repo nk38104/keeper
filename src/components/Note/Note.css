@@ -10,6 +10,7 @@
 
 .note h1 {
     font-size: 1.1em;
+    border-bottom: 1px solid lightgray;
     margin-bottom: 6px;
 }
 

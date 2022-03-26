@@ -8,8 +8,8 @@ form {
     width: 480px;
 }
 
-form input,
-form textarea {
+.create-form input,
+.create-form textarea {
     border: none;
     font-family: inherit;
     font-size: 1.2em;
@@ -19,11 +19,11 @@ form textarea {
     width: 100%;
 }
 
-form input {
+.create-form input {
     border-bottom: 1px solid lightgray;
 }
 
-form button {
+.create-form button {
     background: #f5ba13;
     border: none;
     border-radius: 50%;
@@ -36,8 +36,4 @@ form button {
     position: absolute;
     right: 18px;
     width: 36px;
-}
-
-form button:hover {
-    transform: scale(1.05);
 }
